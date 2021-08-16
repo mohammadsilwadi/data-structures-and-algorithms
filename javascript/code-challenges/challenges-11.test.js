@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
@@ -18,8 +19,8 @@ Becomes:
 ]
 ------------------------------------------------------------------------------------------------ */
 
-function transformToLis(obj){
-  return Object.keys(obj).map(element=>`<li>${element}: ${obj[element]}</li>`);
+function transformToLis(obj) {
+  return Object.keys(obj).map(element => `<li>${element}: ${obj[element]}</li>`);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,8 +52,15 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
+  let output = input.reduce((acc, element) => {
+    let value = element.reduce((accumulator, item) => {
+      return accumulator + item;
+    },0);
+    return acc + value;
+  },0);
+  return output;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -137,7 +145,7 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   return data.filter((str) => str.gender === 'male' ||
-  str.gender === 'female').map((character) => character.name).join(' and ');
+    str.gender === 'female').map((character) => character.name).join(' and ');
 };
 
 
@@ -150,7 +158,8 @@ uses any combination of filter, map and reduce to return the name of the charact
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  let value = data.filter( character => character.height).reduce((a, b) => (a.height > b.height ? a : b));
+  return value.name;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -166,8 +175,8 @@ Run your tests from the console: jest challenges-10.test.js
 
 describe('Testing challenge 1', () => {
   test('It should return a list of key value pairs inside of li tags', () => {
-    expect(transformToLis({name: 'bob', age: 32})[0]).toStrictEqual(`<li>name: bob</li>`);
-    expect(transformToLis({name: 'bob', age: 32})[1]).toStrictEqual(`<li>age: 32</li>`);
+    expect(transformToLis({ name: 'bob', age: 32 })[0]).toStrictEqual(`<li>name: bob</li>`);
+    expect(transformToLis({ name: 'bob', age: 32 })[1]).toStrictEqual(`<li>age: 32</li>`);
     expect(transformToLis({})).toStrictEqual([]);
   });
 });
