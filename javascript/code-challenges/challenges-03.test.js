@@ -7,12 +7,7 @@ Write a function called addTwo that takes in an array and adds two to every valu
 ------------------------------------------------------------------------------------------------ */
 
 const addTwo = (arr) => {
-  let newArray=[];
-  for (let index = 0; index < arr.length; index++) {
-    newArray.push( arr[index]+2);
-  }
-
-  return newArray;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,8 +19,7 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const typeNum = (arr) => {
-  const result = arr.filter(n =>typeof(n)=== 'number' );
-  return result;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,8 +31,7 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  const result = arr.filter(string => string.includes('and'));
-  return result;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,8 +43,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  let result = arr.filter(odd => odd % 2 !== 0);
-  return result;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,9 +55,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  let result = arr.filter(number => forbiddenValues.includes(number) !== true);
-
-  return result;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
