@@ -6,4 +6,4 @@ Write a function called insertShiftArray which takes in an array and a value to 
 + ![Whiteboard Image](https://i.ibb.co/KLnHfCw/My-First-Board-1.jpg)
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
-+ O(logn),o(1)
++ O(logn),o(1)m
