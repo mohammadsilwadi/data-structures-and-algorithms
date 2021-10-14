@@ -84,4 +84,10 @@ def test_includes_True():
     expected = True
     assert actual == expected
 
-
+def test_includes_False():
+    expected = False
+    ll=LinkedList()
+    ll.insert(0)
+    actual = ll.includes(1)
+    expected = False
+    assert actual == expected
