@@ -79,8 +79,8 @@ def test_linked_list_insert_twice():
 def test_includes_True():
     expected = True
     ll=LinkedList()
-    ll.insert(0)
-    actual = ll.includes(0)
+    ll.insert(1)
+    actual = ll.includes(1)
     expected = True
     assert actual == expected
 
