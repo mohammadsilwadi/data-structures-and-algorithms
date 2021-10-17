@@ -68,4 +68,14 @@ def test_append_value():
   actual = node.data
   assert actual == expected
 #9- Can successfully add multiple nodes to the end of a linked list
+def test_multi_to_the_end():
+    ll = LinkedList()
+    ll.append(5)
+    ll.append(4)
+    ll.append(3)
+    ll.append(2)
+    ll.append(2)
+    actual = ll.__str__()
+    expected = '( 5 ) -> ( 4 ) -> ( 3 ) -> ( 2 ) -> ( 2 ) -> None'
+    assert actual == expected
 
