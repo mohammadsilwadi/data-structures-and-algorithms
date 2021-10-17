@@ -51,9 +51,21 @@ def test_includes_False():
     expected = False
     assert actual == expected
 #7-Can properly return a collection of all the values that exist in the linked list
-def test_return_collection():
-    object=LinkedList()
-    object.insert('1')
-    object.insert('2')
-    object.insert('3')
-    assert str(object) == '1=>2=>3=>NULL'
+def test_return_all_values():
+    ll = LinkedList()
+    ll.append('m')
+    ll.append('o')
+    ll.append('h')
+    actual = ll.__str__()
+    expected = '( m ) -> ( o ) -> ( h ) -> None'
+    assert actual == expected
+# 8- test the append value function in the linked list
+def test_append_value():
+  expected = 9
+  ll = LinkedList()
+  ll.append(9)
+  node = ll.head
+  actual = node.data
+  assert actual == expected
+#9- Can successfully add multiple nodes to the end of a linked list
+
