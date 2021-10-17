@@ -109,3 +109,13 @@ def test_before_middle():
     actual = ll.__str__()
     expected = '( 1 ) -> ( 5 ) -> ( 2 ) -> ( 3 ) -> None'
     assert actual == expected
+# Can successfully insert a node after the last node of the linked list
+def test_after_last():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_after(3, 5 )
+    actual = ll.__str__()
+    expected = '( 1 ) -> ( 2 ) -> ( 3 ) -> ( 5 ) -> None'
+    assert actual == expected
