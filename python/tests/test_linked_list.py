@@ -80,15 +80,22 @@ def test_multi_to_the_end():
     assert actual == expected
 
 #Can successfully insert a node before a node located i the middle of a linked list
-
-###################################-insert-after-middle-##################################################
 def test_after_middle():
     ll = LinkedList()
     ll.append(1)
     ll.append(2)
     ll.append(3)
-    ll.insert_after(2, 'added')
+    ll.insert_after(2, 5 )
     actual = ll.__str__()
-    expected = '( 1 ) -> ( 2 ) -> ( added ) -> ( 3 ) -> None'
+    expected = '( 1 ) -> ( 2 ) -> ( 5 ) -> ( 3 ) -> None'
     assert actual == expected
-
+# Can successfully insert a node before the first node of a linked list
+def test_before_middle():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_before(2, '5')
+    actual = ll.__str__()
+    expected = '( 1 ) -> ( 5 ) -> ( 2 ) -> ( 3 ) -> None'
+    assert actual == expected
