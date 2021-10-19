@@ -26,5 +26,13 @@ space=o(1)
 + insert method :Adds a new node with that value to the head of the list with an O(1) Time performance.
 + Includes method:Indicates whether that value exists as a Node’s value somewhere within the list.
 + string : a string representing all the values in the Linked List
++ insert before
+this method takes two arguments the first one is the node wher i want to add before and the second one the new value that i want to add
+
++ isert after
+it works the same as insert before but here we will add after specific node and its also contains two arguments the node i want to add after and the new value
+
++ Kth-method
+Takes the index number as a parameter and its Return node value from the end of the linked_list.
 
 

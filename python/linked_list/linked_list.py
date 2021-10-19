@@ -93,3 +93,24 @@ class LinkedList:
                 current.next.next = value
                 break
             current = current.next
+
+    """
+    Code Challenge: Class 07
+    """
+    def kthFromEnd(self, k):
+        if k < 0:
+            return "K is negative"
+        node_num = 0
+        current = self.head
+        while current: # count the nodes
+            current = current.next
+            node_num = node_num + 1
+
+        if node_num >= k:
+            current = self.head # reset the current value to start the count from the beggining node
+            for i in range(node_num - k-1): #k-1 to remove null
+                current = current.next
+        else:
+            return "Number of K is bigger than the number of Nodes !!!"
+        return current
+
