@@ -25,5 +25,5 @@ Methods:
 - dequeue from the queue is O(n)
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
-pr 
+[Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/27)
 
