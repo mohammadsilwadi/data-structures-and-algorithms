@@ -18,8 +18,6 @@ class  Pseudo_queue():
         else:
             self.rear.next=node
             self.rear=node
-
-
     def dequeue(self):
         if self.is_empty():
          raise Exception("This stack is empty")
