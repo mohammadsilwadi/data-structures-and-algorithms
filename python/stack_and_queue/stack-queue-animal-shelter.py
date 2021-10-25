@@ -33,11 +33,23 @@ class AnimalShelter:
 
         else :
             return('only dog or cat are allowed')
-    
+    def dequeue(self, pref):
+        if not self.front:
+         raise "SomeException"
+        elif self.front.name == pref and not self.front.next:
+            temp = self.front
+            self.front = temp.next
+            return temp
+        elif self.front.next and (self.front.name != pref):
+              current = self.front
+              while current.next:
+                    if current.next.name == pref:
+                        current.next = current.next.next
+                        return current
+                    current = current.next
 
 if __name__=='__main__':
     shelter = AnimalShelter()
     shelter.enqueue('dog')
-    shelter.enqueue('dog')
-    shelter.enqueue('dog')
-    print(shelter)
+
+    print(shelter.enqueue('dog'))
