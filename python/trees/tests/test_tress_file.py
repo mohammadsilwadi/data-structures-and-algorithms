@@ -167,3 +167,20 @@ def test_pre_order():
   expected = ["1", "2", "4", "3"]
   actual = tree.pre_order()
   assert actual == expected
+""""Can successfully return a collection from an inorder traversa"""
+def test_in_order():
+  tree = BinaryTree()
+  a_node = Node('1')
+  b_node = Node('2')
+  c_node = Node('3')
+  d_node = Node('4')
+  a_node.left = b_node
+  a_node.right = c_node
+  b_node.left = d_node
+  tree.root=a_node
+  expected = ["4", "2", "1", "3"]
+
+  actual = tree.in_order()
+
+  assert actual == expected
+  print("test_in_order_ passed")
