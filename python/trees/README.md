@@ -32,3 +32,6 @@
 - [x] Can successfully return a collection from an inorder traversal
 - [x] Can successfully return a collection from a postorder traversal
 
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+[Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/30)
