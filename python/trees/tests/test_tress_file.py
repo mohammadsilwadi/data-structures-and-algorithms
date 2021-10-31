@@ -1,11 +1,9 @@
-
 from trees.tress import BinaryTree, Node
+'''ch 15'''
 """ Can successfully instantiate an empty tree"""
 def test_empty_tree():
     tree = BinaryTree()
     assert tree.root is None
-
-
 '''Can successfully instantiate a tree with a single root node'''
 def test_root_node():
     tree = BinaryTree()
@@ -78,3 +76,18 @@ def test_post_order():
 
   assert actual == expected
   print("test_post_order_ passed")
+  """ ch 16"""
+'''Can successfully get max value  '''
+def test_get_max():
+    tree = BinaryTree()
+    tree.root = Node(10)
+    tree.root.left = Node(15)
+    tree.root.right = Node(30)
+    tree.root.left.left = Node(8)
+    expected = 30
+    actual = tree.tree_max()
+    assert actual == expected
+''' return None if the tree is empty'''
+def test_max_value_empty_tree():
+    tree = BinaryTree()
+    assert tree.tree_max() == None
