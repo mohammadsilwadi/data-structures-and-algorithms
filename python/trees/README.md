@@ -40,5 +40,6 @@ Find the maximum value stored in the tree. You can assume that the values stored
  ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 + [ Whiteboard   ](https://miro.com/app/board/o9J_lmxyEIQ=/)
+
 ![](../img/week_4.jpg)
 
