@@ -1,13 +1,13 @@
 
 #################################
-#####code challenge 15 and 16####
+#####code challenge 15 , 16 and 17####
 #################################
 
 # tree implementation
 """
 This Module defines a Node and a Binary Tree
 """
-
+from trees.breadth_first import Queue
 class Node:
     def __init__(self,data):
        self.right=None
@@ -16,20 +16,7 @@ class Node:
        self.next=None
 
 
-class Queue:
-  def __init__(self, collection=[]):
-    self.data = collection
 
-  def peek(self):
-    if len(self.data):
-      return True
-    return False
-
-  def enqueue(self,item):
-    self.data.append(item)
-
-  def dequeue(self):
-    return self.data.pop(0)
 
 
 class BinaryTree:
