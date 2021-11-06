@@ -19,6 +19,7 @@ Methods:
 <!-- Embedded whiteboard image -->
 <https://miro.com/app/board/o9J_loIDxuA=/>
 
+![Whiteboard](../img/week-3.jpg)
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 - enqueue to the queue is O(1)
