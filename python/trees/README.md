@@ -1,4 +1,4 @@
-# Tree-max
+# Tree-breadth-first
 <!-- Short summary or background information -->
 - Find the Maximum Value in a Binary Tree.
 
