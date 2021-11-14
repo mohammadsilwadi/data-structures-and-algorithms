@@ -31,7 +31,7 @@ def SelectionSort(array)
         array[min]=array[i]
         array[i]=temp
     return array
-```
+
 ### visual step
 
 ![](/img/shot.png)
