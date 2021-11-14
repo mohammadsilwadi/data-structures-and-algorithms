@@ -16,7 +16,7 @@ Selection Sort is a sorting algorithm that traverses the array multiple times as
         DECLARE temp <-- arr[min];
         arr[min] <-- arr[i];
         arr[i] <-- temp;
-    ```
+```
 + python code for insertion sort:
 
 ```
@@ -31,7 +31,7 @@ def SelectionSort(array)
         array[min]=array[i]
         array[i]=temp
     return array
-
+```
 ### visual step
 
 
