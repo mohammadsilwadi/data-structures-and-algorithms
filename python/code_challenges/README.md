@@ -17,7 +17,7 @@ NOTE: The search algorithm used in your function should be a binary search.
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![Whiteboard Image](https://i.ibb.co/GpZcS68/My-First-Board-3.jpg)
+![Whiteboard Image](../img/binary-search.jpg)
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
 - space>0(1)
