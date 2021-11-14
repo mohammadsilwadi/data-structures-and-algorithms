@@ -1,4 +1,5 @@
 from trees.tress import BinaryTree, Node
+from trees.breadth_first import *
 '''ch 15'''
 """ Can successfully instantiate an empty tree"""
 def test_empty_tree():
@@ -91,3 +92,30 @@ def test_get_max():
 def test_max_value_empty_tree():
     tree = BinaryTree()
     assert tree.tree_max() == None
+""" ch 17"""
+'''Can successfully return a collection from a breadth first '''
+def test_bfs():
+  # Arrange
+  # Create tree instance
+  tree = BinaryTree()
+
+  # Create Nodes for A,B,C,D
+  a_node = Node('A')
+  b_node = Node('B')
+  c_node = Node('C')
+  d_node = Node('D')
+  a_node.left = b_node
+  a_node.right = c_node
+  b_node.left = d_node
+
+  # Add Root node to tree
+  tree.root=a_node
+
+  # set expected list
+  expected = ["A", "B", "C", "D"]
+  # set actual to return value of bfs call
+  actual = tree.bfs()
+  # assert actual is same as expected
+  assert actual == expected
+  print("test_bfs passed")
+
