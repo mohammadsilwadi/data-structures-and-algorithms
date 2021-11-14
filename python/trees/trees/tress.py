@@ -1,6 +1,6 @@
 
 #################################
-#####    code challenge 15  #####
+#####code challenge 15 and 16####
 #################################
 
 # tree implementation
@@ -14,6 +14,7 @@ class Node:
        self.left=None
        self.data=data
        self.next=None
+
 
 class Queue:
   def __init__(self, collection=[]):
@@ -125,6 +126,22 @@ class BinaryTree:
 
     walk(self.root)
     return list_of_items
+  def tree_max(self):
+        """find max value in tree"""
+        if self.root is None:
+            return None
+        max = self.root.data
+        def find_max(root):
+            nonlocal max
+            if root.data > max:
+                max = root.data
+            if root.left is not None:
+                find_max(root.left)
+            if root.right is not None:
+                find_max(root.right)
+        find_max(self.root)
+        return max
+
 
 class Binary_search_tree(BinaryTree):
     """
@@ -160,4 +177,7 @@ class Binary_search_tree(BinaryTree):
                 current = current.right
         return False
 
+
+if __name__ == '__main__':
+    tree = BinaryTree()
 

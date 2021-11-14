@@ -1,11 +1,16 @@
-# Trees
+# Tree-max
 <!-- Short summary or background information -->
-- A tree is a nonlinear data structure, compared to arrays, linked lists, stacks and queues which are linear data structures. A tree can be empty with no nodes or a tree is a structure consisting of one node called the root and zero or one or more subtrees.
+- Find the Maximum Value in a Binary Tree.
 
 ## Challenge
 <!-- Description of the challenge -->
-- making tree data structure and make Tree nodes then make another class called binary search tree that inherits from the binary tree class
-- binary search tree contains to methods a- add b- contains
+Write the following method for the Binary Tree class
+
+    find maximum value
+        Arguments: none
+        Returns: number
+
+Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -19,19 +24,22 @@
 
 ## API
 <!-- Description of each method publicly available in each of your trees -->
-- Add time complexity: O(log n)
-- Contains time complexity: O(log n)
+- time: O(1)
+-space:0(n)
 
 
 ## Unit test
 
-- [x] Can successfully instantiate an empty tree
-- [x] Can successfully instantiate a tree with a single root node
-- [x] Can successfully add a left child and right child to a single root node
-- [x] Can successfully return a collection from a preorder traversal
-- [x] Can successfully return a collection from an inorder traversal
-- [x] Can successfully return a collection from a postorder traversal
+- [x] Can successfully get max value
+- [x] return None if the tree is empty'
+
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
-[Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/30)
+[Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/31)
+ ## Whiteboard Process
+<!-- Embedded whiteboard image -->
++ [ Whiteboard   ](https://miro.com/app/board/o9J_lmxyEIQ=/)
+
+![](../img/week_4.jpg)
+
