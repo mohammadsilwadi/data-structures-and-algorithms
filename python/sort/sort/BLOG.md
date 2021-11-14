@@ -35,9 +35,7 @@ def SelectionSort(array)
 ### visual step
 
 
-
-![](/img/shot.png)
-
+![](shot.png)
 
 ### Efficency
 Time: O(n^2)
@@ -46,4 +44,6 @@ Space: O(1)
 No additional space is being created. This array is being sorted in place…keeping the space at constant O(1).
 
 [Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/36)
+
+
 
