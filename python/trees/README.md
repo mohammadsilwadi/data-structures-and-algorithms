@@ -1,13 +1,21 @@
+
+# Tree-fizz-buzz
+
 # Tree-breadth-first
+
 <!-- Short summary or background information -->
 - Find the Maximum Value in a Binary Tree.
 
 ## Challenge
 <!-- Description of the challenge -->
 
-    Write a function called breadth first
-    Arguments: tree
-    Return: list of all values in the tree, in the order they were encountered
+
+    Write a function called fizz buzz tree
+    Arguments: k-ary tree
+    Return: new k-ary tree
+If the value is divisible by 3, replace the value with “Fizz”
+If the value is divisible by 5, replace the value with “Buzz”
+If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
 
 
 ## Approach & Efficiency
@@ -20,18 +28,21 @@
 
 ## Unit test
 
-- [x] Can successfully retun the tree in breadth-first order
-- [x] return None if the tree is empty
+- [x] If the value is divisible by 3, replace the value with “Fizz”
+- [x] If the value is divisible by 5, replace the value with “Buzz”
+- [x] If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+- [x] If the value is not divisible by 3 or 5, simply turn the number into a String.
+
 
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
-[Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/32)
+[Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/33)
  ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 + [ Whiteboard   ](https://miro.com/app/board/o9J_lmxyEIQ=/)
 
 
 
-![](../img/week_41.jpg)
+![](../img/week_43.jpg)
 
