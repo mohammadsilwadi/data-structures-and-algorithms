@@ -34,7 +34,11 @@ def SelectionSort(array)
 
 ### visual step
 
+
+
 ![](/img/shot.png)
+
+
 ### Efficency
 Time: O(n^2)
 The basic operation of this algorithm is comparison. This will happen n * (n-1) number of times…concluding the algorithm to be n squared.
