@@ -1,41 +1,87 @@
-# Insertion Sort
-## Challenge Summary
-Selection Sort is a sorting algorithm that traverses the array multiple times as it slowly builds out the sorting sequence. The traversal keeps track of the minimum value and places it in the front of the array which should be incrementally sorted
+# Merge Sort
+
 ## Insertion Sort pseudo code
 
 + pseudo code for insertion sort:
 ```
-`SelectionSort(int[] arr)`
-    DECLARE n <-- arr.Length;
-    FOR i = 0; i to n - 1
-        DECLARE min <-- i;
-        FOR j = i + 1 to n
-            if (arr[j] < arr[min])
-                min <-- j;
+ALGORITHM Mergesort(arr)
+    DECLARE n <-- arr.length
 
-        DECLARE temp <-- arr[min];
-        arr[min] <-- arr[i];
-        arr[i] <-- temp;
+    if n > 1
+      DECLARE mid <-- n/2
+      DECLARE left <-- arr[0...mid]
+      DECLARE right <-- arr[mid...n]
+      // sort the left side
+      Mergesort(left)
+      // sort the right side
+      Mergesort(right)
+      // merge the sorted left and right sides together
+      Merge(left, right, arr)
+
+ALGORITHM Merge(left, right, arr)
+    DECLARE i <-- 0
+    DECLARE j <-- 0
+    DECLARE k <-- 0
+
+    while i < left.length && j < right.length
+        if left[i] <= right[j]
+            arr[k] <-- left[i]
+            i <-- i + 1
+        else
+            arr[k] <-- right[j]
+            j <-- j + 1
+
+        k <-- k + 1
+
+    if i = left.length
+       set remaining entries in arr to remaining values in right
+    else
+       set remaining entries in arr to remaining values in left
 ```
 + python code for insertion sort:
 
 ```
-def SelectionSort(array)
-    n=len(array)
-    for i in range(n-1):
-        min = i
-        for j in range(i+1, n):
-            if (array[j] < array[min]):
-                min=j
-        temp=array[min]
-        array[min]=array[i]
-        array[i]=temp
-    return array
+def mergesort(arr):
+    n=len(arr)
+    if n>1:
+        mid=n//2
+        left=arr[:mid]
+        right=arr[mid:]
+        mergesort(left)
+        mergesort(right)
+        return merge(left,right,arr)
+def merge(left,right,arr):
+    i=0
+    j=0
+    k=0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            arr[k] = left[i]
+            i = i + 1
+        else:
+            arr[k] = right[j]
+            j = j + 1
+
+        k = k + 1
+    while i < len(left):
+            arr[k] = left[i]
+            i += 1
+            k += 1
+
+    while j < len(right):
+            arr[k] = right[j]
+            j += 1
+            k += 1
+
+
+    return arr
+
+
 ```
 ### visual step
 
 
-![](shot.png)
+![](sho.png)
 
 ### Efficency
 Time: O(n^2)
@@ -43,7 +89,7 @@ The basic operation of this algorithm is comparison. This will happen n * (n-1) 
 Space: O(1)
 No additional space is being created. This array is being sorted in place…keeping the space at constant O(1).
 
-[Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/36)
+[Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/37)
 
 
 
