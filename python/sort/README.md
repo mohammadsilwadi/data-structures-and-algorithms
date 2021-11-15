@@ -5,6 +5,7 @@ Merge sort is one of the most efficient sorting algorithms. It works on the prin
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 + [ Whiteboard   ]()
+
 ![](../img/week_42.jpg)
 
 ## Approach & Efficiency
