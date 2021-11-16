@@ -1,4 +1,4 @@
-# Merge sort
+# quick sort
 ## Challenge Summary
 A sorting technique that sequences a list by continuously dividing the list into two parts and moving the lower items to one side and the higher items to the other. It starts by picking one item in the entire list to serve as a pivot point. The pivot could be the first item or a randomly chosen one.
 
