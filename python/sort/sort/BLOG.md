@@ -1,8 +1,8 @@
-# Merge Sort
+#  Quick sort
 
-## Insertion Sort pseudo code
+## Quick sortt pseudo code
 
-+ pseudo code for insertion sort:
++ pseudo code for Quick sort:
 ```
 ALGORITHM QuickSort(arr, left, right)
     if left < right
@@ -35,7 +35,7 @@ ALGORITHM Swap(arr, i, low)
     arr[i] <-- arr[low]
     arr[low] <-- temp
 ```
-+ python code for insertion sort:
++ python code for Quick sort:
 
 ```
 def quick_sort(arr,left,right):
@@ -73,7 +73,7 @@ def swap(arr,i,low):
 
 
 ### Efficency
-Time: O(n)
+Time: O(log(n))
 The basic operation of this algorithm is comparison. This will happen n * (n-1) number of times…concluding the algorithm to be n squared.
 Space: O(1)
 No additional space is being created. This array is being sorted in place…keeping the space at constant O(1).
