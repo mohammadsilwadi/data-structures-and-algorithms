@@ -1,90 +1,84 @@
-# Merge Sort
+#  Quick sort
 
-## Insertion Sort pseudo code
+## Quick sortt pseudo code
 
-+ pseudo code for insertion sort:
++ pseudo code for Quick sort:
 ```
-ALGORITHM Mergesort(arr)
-    DECLARE n <-- arr.length
+ALGORITHM QuickSort(arr, left, right)
+    if left < right
+        // Partition the array by setting the position of the pivot value
+        DEFINE position <-- Partition(arr, left, right)
+        // Sort the left
+        QuickSort(arr, left, position - 1)
+        // Sort the right
+        QuickSort(arr, position + 1, right)
 
-    if n > 1
-      DECLARE mid <-- n/2
-      DECLARE left <-- arr[0...mid]
-      DECLARE right <-- arr[mid...n]
-      // sort the left side
-      Mergesort(left)
-      // sort the right side
-      Mergesort(right)
-      // merge the sorted left and right sides together
-      Merge(left, right, arr)
+ALGORITHM Partition(arr, left, right)
+    // set a pivot value as a point of reference
+    DEFINE pivot <-- arr[right]
+    // create a variable to track the largest index of numbers lower than the defined pivot
+    DEFINE low <-- left - 1
+    for i <- left to right do
+        if arr[i] <= pivot
+            low++
+            Swap(arr, i, low)
 
-ALGORITHM Merge(left, right, arr)
-    DECLARE i <-- 0
-    DECLARE j <-- 0
-    DECLARE k <-- 0
+     // place the value of the pivot location in the middle.
+     // all numbers smaller than the pivot are on the left, larger on the right.
+     Swap(arr, right, low + 1)
+    // return the pivot index point
+     return low + 1
 
-    while i < left.length && j < right.length
-        if left[i] <= right[j]
-            arr[k] <-- left[i]
-            i <-- i + 1
-        else
-            arr[k] <-- right[j]
-            j <-- j + 1
-
-        k <-- k + 1
-
-    if i = left.length
-       set remaining entries in arr to remaining values in right
-    else
-       set remaining entries in arr to remaining values in left
+ALGORITHM Swap(arr, i, low)
+    DEFINE temp;
+    temp <-- arr[i]
+    arr[i] <-- arr[low]
+    arr[low] <-- temp
 ```
-+ python code for insertion sort:
++ python code for Quick sort:
 
 ```
-def mergesort(arr):
-    n=len(arr)
-    if n>1:
-        mid=n//2
-        left=arr[:mid]
-        right=arr[mid:]
-        mergesort(left)
-        mergesort(right)
-        return merge(left,right,arr)
-def merge(left,right,arr):
-    i=0
-    j=0
-    k=0
-    while i < len(left) and j < len(right):
-        if left[i] <= right[j]:
-            arr[k] = left[i]
-            i = i + 1
-        else:
-            arr[k] = right[j]
-            j = j + 1
-
-        k = k + 1
-    if i == len(left):
-     arr[k:]=right[j:]
-    else:
-     arr[k:]=left[i:]
-
-
+def quick_sort(arr,left,right):
+    if left<right:
+        postion = partition(arr,left,right)
+        quick_sort(arr,left,postion-1)
+        quick_sort(arr,postion+1,right)
     return arr
 
+def partition(arr,left,right):
+    pivot=arr[right]
+    low=left-1
+    for i in range(left,right):
+            if arr[i] <= pivot:
+                low=low+1
+
+                swap(arr,i,low)
+
+    swap(arr, right, low + 1)
+    return low + 1
+
+
+def swap(arr,i,low):
+    temp=arr[i]
+    arr[i]=arr[low]
+    arr[low]=temp
 
 ```
 ### visual step
 
 
-![](sho.png)
+![](b1.png)
+![](b2.png)
+![](b3.png)
+
 
 ### Efficency
-Time: O(n^2)
+Time: O(log(n))
 The basic operation of this algorithm is comparison. This will happen n * (n-1) number of times…concluding the algorithm to be n squared.
 Space: O(1)
 No additional space is being created. This array is being sorted in place…keeping the space at constant O(1).
 
-[Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/37)
+[Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/38)
 
 
 

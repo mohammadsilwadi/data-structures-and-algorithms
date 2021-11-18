@@ -1,12 +1,13 @@
-# Merge sort
+# quick sort
 ## Challenge Summary
-Merge sort is one of the most efficient sorting algorithms. It works on the principle of Divide and Conquer. Merge sort repeatedly breaks down a list into several sublists until each sublist consists of a single element and merging those sublists in a manner that results into a sorted list.
+A sorting technique that sequences a list by continuously dividing the list into two parts and moving the lower items to one side and the higher items to the other. It starts by picking one item in the entire list to serve as a pivot point. The pivot could be the first item or a randomly chosen one.
+
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 + [ Whiteboard   ]()
 
-![](../img/week_42.jpg)
+![](../img/qui.jpg)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -16,4 +17,4 @@ Space: O(1)
 No additional space is being created. This array is being sorted in place…keeping the space at constant O(1).
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
-[Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/37)
+[Pull Request](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/38)
