@@ -18,6 +18,13 @@ def test_hash_not_exist(hashtable):
     actual= hashtable.get('march 10')
     assert actual == expected
 
+'''Successfully handle a collision within the hashtable'''
+def test_hash_handle_collision(hashtable):
+    hashtable.add('march 8' , 400)
+    hashtable.add('march 8' , 20)
+    expected=20
+    actual= hashtable.get('march 8')
+    assert actual == expected
 
 def test_hash(hashtable):
 	expected = 700
