@@ -25,13 +25,18 @@ def test_hash_handle_collision(hashtable):
     expected=20
     actual= hashtable.get('march 8')
     assert actual == expected
-
+'''Successfully hash the words  '''
 def test_hash(hashtable):
 	expected = 700
 	actual = hashtable._HashTable__hash("d")
 	assert actual == expected
 
-def test_hash_word(hashtable):
-	expected = 376
-	actual =  hashtable._HashTable__hash("dd")
-	assert actual == expected
+
+"""Successfully retrieve a value from a bucket within the hashtable that has a collision
+"""
+def test_value_handle_collision(hashtable):
+    hashtable.add('march 8' , 400)
+    hashtable.add('march 8' , 20)
+    expected=True
+    actual= hashtable.contains('march 8')
+    assert actual == expected
