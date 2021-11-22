@@ -1,3 +1,5 @@
+from collections import Counter
+import re
 class Node:
     def __init__(self, value=None, next_=None):
         """
@@ -89,8 +91,29 @@ class HashTable:
             return True
           current = current.next
 
+    def repeated_word(self,str):
+        """
+        return first repetend word  in str as string
+        """
+        if str == "":
+         return str
+        arr1 = str.split(',')
+        arr2 = ' '.join(arr1)
+        arr = arr2.split()
+        for value in arr:
+            repeted_word = value.lower()
+            if self.contains(repeted_word):
+                return value
+            else:
+                self.add(repeted_word,value)
+
+
 if __name__ == "__main__":
     table = HashTable()
     print("======================")
     table.add('march 8' , 400)
     print(table.get('march 8'))
+    hash = HashTable()
+    str="Once upon a time, there was a brave princess who..."
+    actual = hash.repeated_word(str)
+    print(actual)
