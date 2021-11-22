@@ -21,7 +21,7 @@ def test_repeted_word_3(hashtable):
     actual = hashtable.repeated_word(str)
     expected = "it"
     assert actual == expected
-    
+
 def test_empty_string(hashtable):
     "test repeated_word"
     assert hashtable.repeated_word('') == ''
