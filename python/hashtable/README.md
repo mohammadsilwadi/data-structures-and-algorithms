@@ -1,11 +1,14 @@
-# Tree intersection
+# Left_hash
 <!-- Short summary or background information -->
 
 ## Challenge
 <!-- Description of the challenge -->
 
- Write a function called tree_intersection that takes two binary trees as parameters.
- Using your Hashmap implementation as a part of your algorithm, return a set of values found in both trees.
+ Write a function called left join
+Arguments: two hash maps
+The first parameter is a hashmap that has word strings as keys, and a synonym of the key as values.
+The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
+Return: The returned data structure that holds the results is up to you. It doesn’t need to exactly match the output below, so long as it achieves the LEFT JOIN logic
 
 
 ## Approach & Efficiency
@@ -15,8 +18,8 @@ Big O for time is O(n).
 Big O for space complexity of O(n)
 
 ## whiteboard
-![](tree.jpg)
+
 
 
 ## pull request
-[PR](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/41)
+[PR](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/42)

@@ -106,14 +106,25 @@ class HashTable:
                 return value
             else:
                 self.add(repeted_word,value)
+def left_join(left_hash, right_hash):
 
+    output = []
+    for item in left_hash._HashTable__buckets:
+        if item:
+            if right_hash.contains(item.head.value[0]):
+                right_item = right_hash.get(item.head.value[0])
+                output.append([item.head.value[0], item.head.value[1],right_item])
+            else:
+                output.append([item.head.value[0], item.head.value[1],'Null'])
+    return output
 
 if __name__ == "__main__":
-    table = HashTable()
-    print("======================")
-    table.add('march 8' , 400)
-    print(table.get('march 8'))
-    hash = HashTable()
-    str="Once upon a time, there was a brave princess who..."
-    actual = hash.repeated_word(str)
-    print(actual)
+    hash1 = HashTable()
+    hash1.add('good','fine')
+
+    hash2 = HashTable()
+    hash2.add('good','bad')
+
+
+    
+    print(left_join(hash1, hash2))
