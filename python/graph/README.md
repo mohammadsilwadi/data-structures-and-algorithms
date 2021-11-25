@@ -37,3 +37,14 @@ building a graph class that includes the following methods:
 + size
     + Arguments: none
     + Returns the total number of nodes in the graph
+## Check list
+
+- [x] Node can be successfully added to the graph
+- [x] An empty graph properly returns zero
+- [x] The proper size is returned, representing the number of nodes in the graph
+- [x] An edge can be successfully added to the graph
+- [x] A collection of all nodes can be properly retrieved from the graph
+- [x] Neighbors are returned with the weight between nodes included
+- [x] All appropriate neighbors can be retrieved from the graph
+## Pull Request
+[PR](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/43)
