@@ -19,7 +19,7 @@ Big O for space complexity of O(n)
 
 ## whiteboard
 
-
+![](left_join.jpg)
 
 ## pull request
 [PR](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/42)
