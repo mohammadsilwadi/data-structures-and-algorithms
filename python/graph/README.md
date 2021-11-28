@@ -48,3 +48,21 @@ building a graph class that includes the following methods:
 - [x] All appropriate neighbors can be retrieved from the graph
 ## Pull Request
 [PR](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/43)
+## *Code Challenge Class 36*
+
+## Challenge
+<!-- Description of the challenge -->
+Breadth First Search (BFS) algorithm traverses a graph in a breadthward motion and uses a queue to remember to get the next vertex to start a search
+
+## API
+ breadth first
+    Arguments: Node
+    Return: A collection of nodes in the order they were visited.
+    Display the collection
+
+
+## Wihtebored
+![](bds.jpg)
+
+## Pull Request
+[PR](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/44)
