@@ -66,3 +66,18 @@ Breadth First Search (BFS) algorithm traverses a graph in a breadthward motion a
 
 ## Pull Request
 [PR](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/45)
+
+## *Code Challenge Class 37*
+
+## Challenge
+<!-- Description of the challenge -->
+Write a function called business trip
+Arguments: graph, array of city names
+Return: cost or null
+
+
+## Wihtebored
+![](bussins.jpg)
+
+## Pull Request
+[PR](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/46)

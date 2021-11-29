@@ -73,7 +73,7 @@ class Graph:
         """
         Initalization for a hashmap to hold the vertices
         """
-        self.__adjacency_list = {}
+        self._adjacency_list = {}
 
     def add_node(self, value):
         """
@@ -83,22 +83,22 @@ class Graph:
         """
         # new node
         v = Vertex(value)
-        self.__adjacency_list[v] = []
+        self._adjacency_list[v] = []
         return v
 
     def size(self):
-        return len(self.__adjacency_list)
+        return len(self._adjacency_list)
 
     def add_edge(self, start_vertex, end_vertex, weight=0):
         """Adds an edge to the graph"""
-        if start_vertex not in self.__adjacency_list:
+        if start_vertex not in self._adjacency_list:
             raise KeyError("Start Vertex not found in graph")
 
-        if end_vertex not in self.__adjacency_list:
+        if end_vertex not in self._adjacency_list:
             raise KeyError("End Vertex not found in graph")
 
         edge = Edge(end_vertex, weight)
-        self.__adjacency_list[start_vertex].append(edge)
+        self._adjacency_list[start_vertex].append(edge)
 
     def get_nodes(self):
         """
@@ -106,11 +106,11 @@ class Graph:
         Arguments: None
         return: All nodes
         """
-        return self.__adjacency_list.keys()
+        return self._adjacency_list.keys()
 
     def get_neighbors(self, vertex):
         """ """
-        return self.__adjacency_list.get(vertex, [])
+        return self._adjacency_list.get(vertex, [])
 
     def breadth_first_search(self, start_vertex):
         queue = Queue()
@@ -129,10 +129,29 @@ class Graph:
                     visited.add(neighbor)
                     queue.enqueue(neighbor)
         return nodes
+
+    def business_trip(self,cities):
+        if len(cities) == 0:
+            return False,'$0'
+        if self._adjacency_list[cities[0]] == []:
+            return False,'$0'
+        sum = 0
+        flag = False
+        for i in range(len(cities)-1):
+            neighbors = self._adjacency_list[cities[i]]
+            for neighbor in neighbors:
+                if cities[i+1].value == neighbor.vertex.value:
+                    sum += neighbor.weight
+                    flag = True
+                    break
+                else:
+                    sum += 0
+                    flag = False
+        if not flag:
+            return False,'$0'
+        return True,'$'+ str(sum)
+
 if __name__ == '__main__':
-
-
-
   graph = Graph()
   v1 = graph.add_node('Pandora')
   v2 = graph.add_node('Arendelle')
@@ -140,16 +159,23 @@ if __name__ == '__main__':
   v4 = graph.add_node('Monstroplolis')
   v5 = graph.add_node('Narnia')
   v6 = graph.add_node('Naboo')
-  graph.add_edge(v1, v2)
-  graph.add_edge(v1, v4)
-  graph.add_edge(v2,v1)
-  graph.add_edge(v2,v3)
-  graph.add_edge(v2,v4)
-  graph.add_edge(v3,v2)
-  graph.add_edge(v4,v1)
-  graph.add_edge(v4,v2)
-  graph.add_edge(v4,v5)
-  graph.add_edge(v4,v6)
-  graph.add_edge(v6,v4)
-  graph.add_edge(v5,v4)
-  print(graph.breadth_first_search(v1))
+  graph.add_edge(v1,v2,150)
+  graph.add_edge(v1,v3,82)
+  graph.add_edge(v2,v3,99)
+  graph.add_edge(v2,v4,42)
+  graph.add_edge(v3,v4,105)
+  graph.add_edge(v3,v5,37)
+  graph.add_edge(v3,v6,26)
+  graph.add_edge(v4,v6,73)
+  graph.add_edge(v5,v6,250)
+#   print(graph.print_djacency_list())
+  cities = [v1,v3]
+  print(graph.business_trip(cities))
+  cities2 = [v2,v4,v6]
+  print(graph.business_trip(cities2))
+  cities3 = [v6,v1]
+  print(graph.business_trip(cities3))
+  cities4 = [v6]
+  print(graph.business_trip(cities4))
+  cities5 = [v1,v2,v3,v4,v5,v6]
+  print(graph.business_trip(cities5))
