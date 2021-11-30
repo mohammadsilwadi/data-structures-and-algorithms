@@ -81,3 +81,18 @@ Return: cost or null
 
 ## Pull Request
 [PR](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/46)
+## *Code Challenge Class 38*
+
+## Challenge
+<!-- Description of the challenge -->
+Name: Depth first
+Arguments: Node (Starting point of search)
+Return: A collection of nodes in their pre-order depth-first traversal order
+Program output: Display the collection
+
+
+## Wihtebored
+![](bfs.jpg)
+
+## Pull Request
+[PR](https://github.com/mohammadsilwadi/data-structures-and-algorithms/pull/47)

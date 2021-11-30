@@ -52,7 +52,7 @@ class Stack:
         """
 		Return the top node in a stack.
 		"""
-        self.dq.pop()
+        return self.dq.pop()
 
 
 class Edge:
@@ -151,31 +151,36 @@ class Graph:
             return False,'$0'
         return True,'$'+ str(sum)
 
+    def depth_first(self, vertex):
+        nodes=list()
+        def walk(vertex):
+            nodes.append(vertex.value)
+            neighbors = self.get_neighbors(vertex)
+            for neighbor in neighbors:
+                if neighbor.vertex.value not in nodes:
+                    walk(neighbor.vertex)
+        walk(vertex)
+        return nodes
+
 if __name__ == '__main__':
-  graph = Graph()
-  v1 = graph.add_node('Pandora')
-  v2 = graph.add_node('Arendelle')
-  v3 = graph.add_node('Metroville')
-  v4 = graph.add_node('Monstroplolis')
-  v5 = graph.add_node('Narnia')
-  v6 = graph.add_node('Naboo')
-  graph.add_edge(v1,v2,150)
-  graph.add_edge(v1,v3,82)
-  graph.add_edge(v2,v3,99)
-  graph.add_edge(v2,v4,42)
-  graph.add_edge(v3,v4,105)
-  graph.add_edge(v3,v5,37)
-  graph.add_edge(v3,v6,26)
-  graph.add_edge(v4,v6,73)
-  graph.add_edge(v5,v6,250)
-#   print(graph.print_djacency_list())
-  cities = [v1,v3]
-  print(graph.business_trip(cities))
-  cities2 = [v2,v4,v6]
-  print(graph.business_trip(cities2))
-  cities3 = [v6,v1]
-  print(graph.business_trip(cities3))
-  cities4 = [v6]
-  print(graph.business_trip(cities4))
-  cities5 = [v1,v2,v3,v4,v5,v6]
-  print(graph.business_trip(cities5))
+    graph = Graph()
+    v1 = graph.add_node('A')
+    v2 = graph.add_node('B')
+    v3 = graph.add_node('C')
+    v4 = graph.add_node('D')
+    v5 = graph.add_node('E')
+    v6 = graph.add_node('F')
+    v7 = graph.add_node('G')
+    v8 = graph.add_node('H')
+    graph.add_edge(v1,v2)
+    graph.add_edge(v1,v4)
+    graph.add_edge(v2,v3)
+    graph.add_edge(v2,v4)
+    graph.add_edge(v3,v7)
+    graph.add_edge(v4,v5)
+    graph.add_edge(v4,v8)
+    graph.add_edge(v4,v6)
+    graph.add_edge(v6,v8)
+
+    print(graph.depth_first(v1))
+#A, B, C, G, D, E, H, F
